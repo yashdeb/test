@@ -8,4 +8,4 @@ jobs:
     machine: true
     resource_class: yashdeb/circleci-runner
     steps:
-      - run: echo "Hi I'm on Runners!"
+      - run: mysql -u admin -p @ilugoel
