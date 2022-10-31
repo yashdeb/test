@@ -8,4 +8,4 @@ jobs:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
-        - run: echo "Say hello to YAML!"
+        - run: echo "Hello Yash"
