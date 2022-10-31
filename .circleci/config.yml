@@ -9,5 +9,5 @@ jobs:
     resource_class: yashdeb/circleci-runner
     steps:
       - run:
-          command:  echo "$yash_Database_Name" 
+          command:  echo $yash_Database_Name 
             
