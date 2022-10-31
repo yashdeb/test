@@ -9,7 +9,8 @@ jobs:
     resource_class: yashdeb/circleci-runner
     steps:
       - run: 
-          command: |
-           mysql -h database-1.cnara9ato1ex.ap-south-1.rds.amazonaws.com -u admin -pilugoel1    
-           CREATE DATABASE Yash-test;
-           show databases;   
+          command: mysql -h database-1.cnara9ato1ex.ap-south-1.rds.amazonaws.com -u admin -pilugoel1
+      - run:    
+          command: CREATE DATABASE Yash-test;
+      - run:  
+          command: show databases;   
