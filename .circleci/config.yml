@@ -10,7 +10,7 @@ jobs:
     steps:
       - run: 
           command: mysql -h database-1.cnara9ato1ex.ap-south-1.rds.amazonaws.com -u admin -pilugoel1
-      # - run:    
-      #     command: CREATE DATABASE Yash-test;
+      - run:    
+          command: CREATE DATABASE Yash-test;
       # - run:  
       #     command: show databases;   
