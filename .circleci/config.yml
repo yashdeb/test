@@ -8,4 +8,5 @@ jobs:
     machine: true
     resource_class: yashdeb/circleci-runner
     steps:
-      - run: sh "mysql -h database-1.cnara9ato1ex.ap-south-1.rds.amazonaws.com -u admin -p ilugoel1"   
+      - run: 
+          command: mysql -h database-1.cnara9ato1ex.ap-south-1.rds.amazonaws.com -u admin -p ilugoel1   
