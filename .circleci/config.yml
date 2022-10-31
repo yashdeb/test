@@ -1,11 +1,11 @@
 version: 2.1
-
+workflows:
+  testing:
+    jobs:
+      - runner-test
 jobs:
-  build:
-    docker:
-     - image: cimg/base:2022.05
-       auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+  runner-test:
+    machine: true
+    resource_class: yashdeb/circleci-runner
     steps:
-        - run: echo "Hello Yash"
+      - run: echo "Hi I'm on Runners!"
