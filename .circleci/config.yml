@@ -9,5 +9,7 @@ jobs:
     resource_class: yashdeb/circleci-runner
     steps:
       - run:
-          command: mysql -h database-1.cnara9ato1ex.ap-south-1.rds.amazonaws.com -u $yash_Database_Name -p$Mysql_pass  
+          command: echo "hi"
+      - run:
+          command: echo "this is yash"     
             
