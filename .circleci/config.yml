@@ -19,6 +19,6 @@ jobs:
           password: $DOCKERHUB_PASSWORD 
     steps:
       - checkout
-      - run: echo "hello world" 
+      - run: echo "hello" 
             
             
