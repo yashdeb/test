@@ -3,6 +3,7 @@ workflows:
   testing:
     jobs:
       - runner-test
+      - hello-job
 jobs:
   runner-test:
     machine: true
@@ -11,5 +12,15 @@ jobs:
       - run:
           command: echo "hi"
       - run:
-          command: echo "this is yash"     
+          command: echo "this is yash" 
+  hello-job:
+    docker:
+      - image: cimg/node:17.2.0 
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD 
+    steps:
+      - checkout
+      - run: echo "hello world" 
+            
             
