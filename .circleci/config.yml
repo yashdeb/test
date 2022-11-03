@@ -3,7 +3,6 @@ workflows:
   testing:
     jobs:
       - runner-test
-      - hello-job
 jobs:
   runner-test:
     machine: true
@@ -11,15 +10,9 @@ jobs:
     steps:
       - run: 
           command: |
-           echo $(sh test.sh)
-  hello-job:
-    docker:
-      - image: cimg/node:17.2.0 
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD 
-    steps:
-      - checkout
-      - run: echo "hello world" 
-            
+           aws ssm send-command \
+              --document-name "AWS-RunShellScript" \
+              --targets '[{"Key":"InstanceIds","Values":["i-0658740b654a97c23"]}]' \
+              --parameters '{"commands":["cd /home/ec2-user","sh test.sh yash goel"]}'
+
             
