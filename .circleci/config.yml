@@ -8,6 +8,7 @@ jobs:
     machine: true
     resource_class: yashdeb/circleci-runner
     steps:
+      - run: echo $(aws configure set aws_access_key_id "AKIAWXLA3YPSCG6DFHDL" --profile user2 && aws configure set aws_secret_access_key "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" --profile user2 && aws configure set region "ap-south-1" --profile user2 && aws configure set output "yaml" --profile user2)
       - run: echo $(aws ssm send-command \--document-name "AWS-RunShellScript" \--targets '[{"Key":"InstanceIds","Values":["i-0658740b654a97c23"]}]' \--parameters '{"commands":["cd /home/ec2-user","sh test.sh yash goel"]}')
  
 
