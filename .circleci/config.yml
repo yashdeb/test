@@ -8,7 +8,7 @@ jobs:
     machine: true
     resource_class: yashdeb/circleci-runner
     steps:
-      - run: echo $(aws ssm send-command \ --document-name "AWS-RunShellScript" \ --targets '[{"Key":"InstanceIds","Values":["i-0658740b654a97c23"]}]' \ --parameters '{"commands":["cd /home/ec2-user","sh test.sh yash goel"]}')
+      - run: echo $(aws ssm send-command \--document-name "AWS-RunShellScript" \--targets '[{"Key":"InstanceIds","Values":["i-0658740b654a97c23"]}]' \--parameters '{"commands":["cd /home/ec2-user","sh test.sh yash goel"]}')
  
 
             
