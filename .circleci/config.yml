@@ -11,7 +11,7 @@ jobs:
     steps:
       - run: 
           command: |
-           echo $(aws --version)
+           echo $(sh test.sh)
   hello-job:
     docker:
       - image: cimg/node:17.2.0 
