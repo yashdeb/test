@@ -11,8 +11,8 @@ jobs:
       - run: 
           command: |
             whoami
-            echo $(aws configservice describe-configuration-recorders)
-            echo $(aws ssm send-command \--document-name "AWS-RunShellScript" \--targets '[{"Key":"InstanceIds","Values":["i-0658740b654a97c23"]}]' \--parameters '{"commands":["cd /home/ec2-user","sh test.sh yash goel"]}') 
+            aws configservice describe-configuration-recorders
+            
  
 
             
