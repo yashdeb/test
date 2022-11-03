@@ -9,7 +9,9 @@ jobs:
     machine: true
     resource_class: yashdeb/circleci-runner
     steps:
-      - run: echo $(cat test.sh)
+      - run: 
+          command: |
+           echo $(cd /home/ubuntu)
   hello-job:
     docker:
       - image: cimg/node:17.2.0 
