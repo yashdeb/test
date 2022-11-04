@@ -12,6 +12,7 @@ jobs:
           command: |
             whoami
             aws configservice describe-configuration-recorders
+            echo $CIRCLE_SHA1
             
  
 
