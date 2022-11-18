@@ -5,14 +5,13 @@ workflows:
       - runner-test
 jobs:
   runner-test:
-    machine: true
-    resource_class: yashdeb/circleci-runner
+    executor: aws-cli/default
+    resource_class: medium
     steps:
-      - run: 
-          command: |
-            whoami
-            aws configservice describe-configuration-recorders
-            echo $CIRCLE_SHA1
+      - aws-ecr/build-and-push-image:
+          setup-remote-docker: true
+          #remote-docker-version: '20.10.21'
+          remote-docker-layer-caching: true
             
  
 
