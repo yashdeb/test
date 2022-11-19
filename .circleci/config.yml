@@ -1,6 +1,5 @@
 version: 2.1
 workflows:
-  version: 2
   testing:
     jobs:
       - test
@@ -9,4 +8,8 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - setup_remote_docker: 
+      - checkout
+      - run:
+          name: "Say hello"
+          command: "echo Hello, World!"     
+  
