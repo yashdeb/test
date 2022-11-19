@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   aws-ecr: circleci/aws-ecr@7.3.0
+  aws-cli: circleci/aws-cli@2.0
 
 workflows:
   testing:
@@ -23,24 +24,6 @@ jobs:
       - aws-ecr/build-and-push-image:
           aws-access-key-id: ACCESS_KEY_ID_ENV_VAR_NAME
           aws-cli-version: latest
-          aws-secret-access-key: SECRET_ACCESS_KEY_ENV_VAR_NAME
-          context: myContext
-          create-repo: true
-          dockerfile: .
-          #executor: aws-ecr/default
-          no-output-timeout: 20m
-          path: .
-          platform: linux/amd64
-          profile-name: myProfileName
-          public-registry: false
-          push-image: true
-          region: AWS_DEFAULT_REGION
-          #registry-id: AWS_ECR_REGISTRY_ID
-          repo: myECRRepository
+          aws-secret-access-key: SECRET_ACCESS_KEY_ENV_VAR_NAME 
           setup-remote-docker: true
           remote-docker-version: '20.10.21'
-          remote-docker-layer-caching: true
-            
- 
-
-            
