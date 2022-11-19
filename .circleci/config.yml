@@ -13,6 +13,6 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
       - setup_remote_docker:
-          version: 20.10.14
+          version: 
       - run: |
           echo "hello"
