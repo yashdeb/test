@@ -4,6 +4,7 @@ orbs:
   aws-cli: circleci/aws-cli@2.0
 
 workflows:
+  version: 2
   testing:
     jobs:
       - test
@@ -27,3 +28,4 @@ jobs:
           aws-secret-access-key: SECRET_ACCESS_KEY_ENV_VAR_NAME 
           setup-remote-docker: true
           remote-docker-version: '20.10.21'
+          repo: testing
