@@ -23,7 +23,7 @@ jobs:
           create-repo: false
           dockerfile: Dockerfile
           path: .
-          region: AWS_REGION	
+          region: 'AWS_REGION'	
           registry-id: AWS_ECR_REGISTRY_ID
           repo: testing
           tag: 'yaash'
