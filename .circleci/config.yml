@@ -31,7 +31,7 @@ jobs:
           remote-docker-layer-caching: true    
 workflows:
   version: 2
-  testing:
+  test:
     jobs:
       - test
       - build
