@@ -17,13 +17,13 @@ jobs:
     resource_class: medium
     steps:
       - aws-ecr/build-and-push-image:
-          account-url: AWS_ECR_ACCOUNT_URL
+          #account-url: AWS_ECR_ACCOUNT_URL
           aws-access-key-id: ACCESS_KEY_ID_ENV_VAR_NAME	
           aws-secret-access-key: SECRET_ACCESS_KEY_ENV_VAR_NAME
           create-repo: false
           dockerfile: Dockerfile
           path: .
-          region: AWS_DEFAULT_REGION	
+          region: AWS_REGION	
           registry-id: AWS_ECR_REGISTRY_ID
           repo: testing
           tag: 'yaash'
