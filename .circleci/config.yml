@@ -28,7 +28,7 @@ jobs:
           repo: testing
           tag: 'yaash'
           setup-remote-docker: true
-          remote-docker-version: 20.10
+          remote-docker-version: '20.1'
           remote-docker-layer-caching: true 
 workflows:
   version: 2
