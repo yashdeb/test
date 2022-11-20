@@ -16,6 +16,8 @@ jobs:
     executor: aws-cli/default
     resource_class: medium
     steps:
+      - setup-remote-docker:
+          version: 20.10.21
       - aws-ecr/build-and-push-image:
           #account-url: AWS_ECR_ACCOUNT_URL
           aws-access-key-id: ACCESS_KEY_ID_ENV_VAR_NAME	
@@ -27,8 +29,7 @@ jobs:
           registry-id: AWS_ECR_REGISTRY_ID
           repo: testing
           tag: 'yaash'
-          setup-remote-docker: true
-            - version: '20.10.21'
+          #setup-remote-docker: true
           remote-docker-layer-caching: true 
 workflows:
   version: 2
