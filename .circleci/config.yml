@@ -17,7 +17,6 @@ jobs:
     resource_class: medium
     steps:
       - aws-ecr/build-and-push-image:
-          #account-url: AWS_ECR_ACCOUNT_URL
           aws-access-key-id: ACCESS_KEY_ID_ENV_VAR_NAME	
           aws-secret-access-key: SECRET_ACCESS_KEY_ENV_VAR_NAME
           create-repo: false
